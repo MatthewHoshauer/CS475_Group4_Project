@@ -1,4 +1,25 @@
 from socket import *
+
+import openpyxl
+
+dataframe = openpyxl.load_workbook()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 msg = "\r\nHello [Agency Name], you have an upcoming appointment with [Client Name] on [Appointment Date]. Their needs are [Client Needs].\n"
 msg = msg + "The client's phone number is [Client Phone Number] if more information is needed from the client.\n\n--Pathways Staff\n[Pathways Contact Information Phone & Email]"
 endmsg = "\r\n.\r\n"
