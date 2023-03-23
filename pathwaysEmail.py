@@ -1,30 +1,22 @@
-from socket import *
+from socket import * # used for sending mail
 
-# import openpyxl
+import pandas as pd  # used for getting stuff from spreadsheet
 
-# dataframe = openpyxl.load_workbook("TestBook.csv")
+sample_data = pd.read_csv('TestBook.csv') #put CSV information into structure
 
-# # Define variable to read sheet
-# dataframe1 = dataframe.active
- 
-# # Iterate the loop to read the cell values
-# for row in range(0, dataframe1.max_row):
-#     for col in dataframe1.iter_cols(1, dataframe1.max_column):
-#         print(col[row].value)
 
-# import csv
+# sample_data.head()
 
-# file = open('TestBook.csv')
-
-# type(file)
-
-import pandas as pd
-
-sample_data = pd.read_csv('TestBook.csv')
-
-print(sample_data.head)
-
+print('\n\n')
 print("test===================")
+
+print(sample_data['needs'].loc[sample_data.index[0]])
+# column is specified in 'needs'
+# loc is used to get cell value at row
+
+# we will use this method parse value from cells
+
+
 
 
 
