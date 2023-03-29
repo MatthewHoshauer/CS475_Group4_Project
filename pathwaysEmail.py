@@ -2,7 +2,17 @@ from socket import * # used for sending mail
 
 import pandas as pd  # used for getting stuff from spreadsheet
 
-sample_data = pd.read_csv('TestBook.csv') #put CSV information into structure
+
+SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'
+SHEET_NAME = 'AAPL'
+url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
+df = pd.read_csv(url)
+print(df.head())
+
+
+
+
+# sample_data = pd.read_csv('TestBook.csv') #put CSV information into structure
 
 
 # sample_data.head()
@@ -10,27 +20,11 @@ sample_data = pd.read_csv('TestBook.csv') #put CSV information into structure
 print('\n\n')
 print("test===================")
 
-print(sample_data['needs'].loc[sample_data.index[0]])
+# print(sample_data['needs'].loc[sample_data.index[0]])
 # column is specified in 'needs'
 # loc is used to get cell value at row
 
 # we will use this method parse value from cells
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
