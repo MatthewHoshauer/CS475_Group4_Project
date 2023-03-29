@@ -7,29 +7,17 @@ SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'
 SHEET_NAME = 'AAPL'
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
 df = pd.read_csv(url)
+
 print(df.head())
 
-
-
-
-# sample_data = pd.read_csv('TestBook.csv') #put CSV information into structure
-
-
-# sample_data.head()
 
 print('\n\n')
 print("test===================")
 
-# print(sample_data['needs'].loc[sample_data.index[0]])
-# column is specified in 'needs'
-# loc is used to get cell value at row
-
-# we will use this method parse value from cells
-
 
 
 msg = "\r\nHello [Agency Name], you have an upcoming appointment with [Client Name] on [Appointment Date]. Their needs are [Client Needs].\n"
-msg = msg + "The client's phone number is [Client Phone Number] if more information is needed from the client.\n\n--Pathways Staff\n[Pathways Contact Information Phone & Email]"
+msg = msg + "The client's phone number is [Client Phone Number] if more information is needed from the client.\n\n--Pathways Staff\n[Pathways Phone: (803) 366-PATH (7284)]"
 endmsg = "\r\n.\r\n"
 
 # Choose a mail server (e.g. Google mail server) and call it mailserver
