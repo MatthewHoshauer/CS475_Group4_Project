@@ -8,7 +8,7 @@ SHEET_NAME = 'AAPL'
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
 df = pd.read_csv(url)
 
-print(df.head())
+print(df["agency name"].iloc[-1])
 
 
 print('\n\n')
