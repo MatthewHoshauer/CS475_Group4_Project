@@ -8,11 +8,12 @@ SHEET_NAME = 'AAPL'
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
 df = pd.read_csv(url)
 
-agencyName = df["agency name"].iloc[-1]
-clientName = df["client name"].iloc[-1]
-apptDate = df["appt date"].iloc[-1]
-needs = df["needs"].iloc[-1]
-clientNum = df["client phone number"].iloc[-1]
+agencyName = df["Agency Name"].iloc[-1]
+agencyEmail = df["Agency Email"].iloc[-1]
+clientName = df["Client Name"].iloc[-1]
+apptDate = df["Appointment Date"].iloc[-1]
+needs = df["Needs"].iloc[-1]
+clientNum = df["Client Phone Number"].iloc[-1]
 
 print('\n\n')
 print("test===================")
@@ -62,7 +63,7 @@ recv2 = recv2.decode()
 print("After MAIL FROM command: " + recv2)
 
 # Send RCPT TO command and print server response.
-rcptTo = "RCPT TO: owense6@mailbox.winthrop.edu\r\n"
+rcptTo = "RCPT TO: " + agencyEmail + "\r\n"
 clientSocket.send(rcptTo.encode())
 recv3 = clientSocket.recv(1024)
 recv3 = recv3.decode()
