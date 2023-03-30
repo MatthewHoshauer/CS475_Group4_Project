@@ -3,8 +3,8 @@ from socket import * # used for sending mail
 import pandas as pd  # used for getting stuff from spreadsheet
 
 
-SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'
-SHEET_NAME = 'AAPL'
+SHEET_ID = '1mvlGKF3aSqCCNvBDOKiLJ2H9iv7FreMcg2dUEZe5eBk'
+SHEET_NAME = 'TEST'
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
 df = pd.read_csv(url)
 
