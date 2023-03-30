@@ -8,7 +8,11 @@ SHEET_NAME = 'AAPL'
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
 df = pd.read_csv(url)
 
-print(df["agency name"].iloc[-1])
+agencyName = df["agency name"].iloc[-1]
+clientName = df["client name"].iloc[-1]
+apptDate = df["appt date"].iloc[-1]
+needs = df["needs"].iloc[-1]
+clientNum = df["client phone number"].iloc[-1]
 
 
 print('\n\n')
@@ -16,8 +20,8 @@ print("test===================")
 
 
 
-msg = "\r\nHello [Agency Name], you have an upcoming appointment with [Client Name] on [Appointment Date]. Their needs are [Client Needs].\n"
-msg = msg + "The client's phone number is [Client Phone Number] if more information is needed from the client.\n\n--Pathways Staff\n[Pathways Phone: (803) 366-PATH (7284)]"
+msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
+msg = msg + "The client's phone number is " + clientNum + " if more information is needed from the client.\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
 endmsg = "\r\n.\r\n"
 
 # Choose a mail server (e.g. Google mail server) and call it mailserver
