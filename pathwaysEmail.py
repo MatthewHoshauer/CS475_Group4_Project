@@ -3,27 +3,35 @@ from socket import * # used for sending mail
 import pandas as pd  # used for getting stuff from spreadsheet
 
 
-SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'
-SHEET_NAME = 'AAPL'
-url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
-df = pd.read_csv(url)
+SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'                                              # ID associated with Google Sheets linked to Google Form
+SHEET_NAME = 'Test'                                                                                    # Testing
+url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'      # URL to load will be the URL of the Google Sheets linked to Google Form
+df = pd.read_csv(url)                                                                                  # put the data into a dataframe
 
-agencyName = df["agency name"].iloc[-1]
-clientName = df["client name"].iloc[-1]
-apptDate = df["appt date"].iloc[-1]
-needs = df["needs"].iloc[-1]
-clientNum = df["client phone number"].iloc[-1]
-agencyEmail = df["agency email"].iloc[-1]
+agencyName = df["agency name"].iloc[-1]           # This section takes the information from each column
+clientName = df["client name"].iloc[-1]           # and stores it inside a variable. This information
+apptDate = df["appt date"].iloc[-1]               # is used in the print-out statement immediately
+needs = df["needs"].iloc[-1]                      # below this codeblock.
+clientNum = df["client phone number"].iloc[-1]    
+agencyEmail = df["agency email"].iloc[-1]         
 
-if clientNum != None:
+
+# This print statement below will print either one of two statements depending on whether or not the client has a phone number.
+
+if clientNum != None: # if the client DOES have a phone number
     msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
     msg = msg + "The client's phone number is " + clientNum + " if more information is needed from the client.\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
     endmsg = "\r\n.\r\n"
 
-else:
+else: # if they DON'T have a phone number
     msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
     msg = msg + "\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
     endmsg = "\r\n.\r\n"
+
+# Gives user information (mostly testing purposes)
+print("+\n" + "Email has been sent successfully. Associated information is below:" + "\n")
+print(df.iloc[-1])
+
 
 # Choose a mail server (e.g. Google mail server) and call it mailserver
 mailserver = ("list.winthrop.edu", 25)
