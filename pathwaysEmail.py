@@ -18,18 +18,18 @@ agencyEmail = df["agency email"].iloc[-1]
 
 # This print statement below will print either one of two statements depending on whether or not the client has a phone number.
 
-if clientNum != None: # if the client DOES have a phone number
+if clientNum != "0": # if the client has a phone number have a phone number
     msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
     msg = msg + "The client's phone number is " + clientNum + " if more information is needed from the client.\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
     endmsg = "\r\n.\r\n"
 
-else: # if they DON'T have a phone number
+elif clientNum == "0": # if the client does NOT have a phone number
     msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
     msg = msg + "\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
     endmsg = "\r\n.\r\n"
 
 # Gives user information (mostly testing purposes)
-print("+\n" + "Email has been sent successfully. Associated information is below:" + "\n")
+print("\n" + "Email has been sent successfully. Associated information is below:" + "\n")
 print(df.iloc[-1])
 
 
@@ -57,7 +57,7 @@ recv2 = clientSocket.recv(1024)
 recv2 = recv2.decode()
 
 # Send RCPT TO command and print server response.
-rcptTo = "RCPT TO: owense6@mailbox.winthrop.edu\r\n"
+rcptTo = "RCPT TO: " + agencyEmail + "\r\n"
 clientSocket.send(rcptTo.encode())
 recv3 = clientSocket.recv(1024)
 recv3 = recv3.decode()
