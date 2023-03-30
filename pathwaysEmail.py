@@ -13,6 +13,7 @@ clientName = df["client name"].iloc[-1]
 apptDate = df["appt date"].iloc[-1]
 needs = df["needs"].iloc[-1]
 clientNum = df["client phone number"].iloc[-1]
+agencyEmail = df["agency email"].iloc[-1]
 
 print('\n\n')
 print("test===================")
