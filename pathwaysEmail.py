@@ -14,15 +14,19 @@ apptDate = df["appt date"].iloc[-1]
 needs = df["needs"].iloc[-1]
 clientNum = df["client phone number"].iloc[-1]
 
-
 print('\n\n')
 print("test===================")
 
 
+if clientNum != None:
+    msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
+    msg = msg + "The client's phone number is " + clientNum + " if more information is needed from the client.\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
+    endmsg = "\r\n.\r\n"
 
-msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
-msg = msg + "The client's phone number is " + clientNum + " if more information is needed from the client.\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
-endmsg = "\r\n.\r\n"
+else:
+    msg = "\r\nHello " + agencyName + ", you have an upcoming appointment with " + clientName + " on " + apptDate + ". Their needs are " + needs + ".\n"
+    msg = msg + "\n\n--Pathways Staff\nPathways Phone: (803) 366-PATH (7284)"
+    endmsg = "\r\n.\r\n"
 
 # Choose a mail server (e.g. Google mail server) and call it mailserver
 mailserver = ("list.winthrop.edu", 25)
