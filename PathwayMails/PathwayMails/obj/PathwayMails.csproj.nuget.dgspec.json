@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\PathwayMails.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\PathwayMails.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\PathwayMails.csproj",
+        "projectName": "PathwayMails",
+        "projectPath": "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\PathwayMails.csproj",
+        "packagesPath": "C:\\Users\\Beastar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Beastar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "IronPython": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.10, )"
+            },
+            "python": {
+              "target": "Package",
+              "version": "[3.11.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

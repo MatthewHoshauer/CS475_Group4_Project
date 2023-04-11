@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "e3Mm3PS7nYRoLefZAasIr2guLoIqfSMT7CKP4btEGHlltOKDmalB/I1ZJ2X0NtPb80DnABxRnGxzqTwp+ePAng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Beastar\\Documents\\Winthrop Classes and Assignments\\CS476\\CS475_Group4_Project\\PathwayMails\\PathwayMails\\PathwayMails.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Beastar\\.nuget\\packages\\dynamiclanguageruntime\\1.3.3\\dynamiclanguageruntime.1.3.3.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\ironpython\\3.4.0\\ironpython.3.4.0.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\mono.unix\\7.1.0-final.1.21458.1\\mono.unix.7.1.0-final.1.21458.1.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\python\\3.11.3\\python.3.11.3.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Beastar\\.nuget\\packages\\unity\\5.11.10\\unity.5.11.10.nupkg.sha512"
+  ],
+  "logs": []
+}
