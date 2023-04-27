@@ -3,7 +3,6 @@ from socket import * # used for sending mail
 import pandas as pd  # used for getting stuff from spreadsheet
 import itertools     # used for iterating through lists
 
-
 SHEET_ID = '1y2n-h76i_VXaba_DRtOYiPcUoQGUjvBudb0mTNfHzzc'                                              # ID associated with Google Sheets linked to Google Form
 SHEET_NAME = 'Test'                                                                                    # Testing
 url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'      # URL to load will be the URL of the Google Sheets linked to Google Form
