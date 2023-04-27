@@ -10,8 +10,12 @@
         <Border BorderBrush="DarkGreen" BorderThickness="15"/>
 
         <Button x:Name = "button1" Content = "Send Mail" Click = "OnClick" 
-         Width = "150" Height = "30" HorizontalAlignment = "Center" />
-        
+                
+
+         Width = "182" Height="50" HorizontalAlignment = "Left" Margin="131,253,0,131" />
+
+        <Button Width="182" Height="50" Content="Show Previous Email" Margin="463,253,155,131" />
+
         <Image Margin="214,38,214,295" Source="/images/PathwaysLogo.png" Stretch="Fill"/>
 
     </Grid>
